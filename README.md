@@ -18,7 +18,7 @@ Ghost Leg (Chinese: 畫鬼腳), known in Japan as Amidakuji (阿弥陀籤, "Amid
 
 - - -
 
-## Controls
+## Control
 
 |  | Action | Input |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ $ go get -v github.com/nanitefactory/amidakuji/...
 ```
 
 ```
-$ cd $GOPATH/nanitefactory/amidakuji/
+$ cd $GOPATH/src/nanitefactory/amidakuji/
 $ make
 ```
 
@@ -65,7 +65,7 @@ $ go get -v github.com/nanitefactory/amidakuji/...
 ```
 
 ```
-$ cd $GOPATH/nanitefactory/amidakuji/
+$ cd $GOPATH/src/nanitefactory/amidakuji/
 $ make
 ```
 
