@@ -41,6 +41,7 @@ Ghost Leg (Chinese: 畫鬼腳), known in Japan as Amidakuji (阿弥陀籤, "Amid
 
 ```
 $ go get -v github.com/nanitefactory/amidakuji/...
+$ go get -v -u github.com/go-bindata/go-bindata/...
 ```
 
 ```
@@ -62,6 +63,7 @@ $ sudo apt install libglib2.0-dev libpango1.0-dev libasound2-dev libgdk-pixbuf2.
 
 ```
 $ go get -v github.com/nanitefactory/amidakuji/...
+$ go get -v -u github.com/go-bindata/go-bindata/...
 ```
 
 ```
