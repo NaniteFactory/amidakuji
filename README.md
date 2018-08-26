@@ -45,7 +45,7 @@ $ go get -v -u github.com/go-bindata/go-bindata/...
 ```
 
 ```
-$ cd $GOPATH/src/nanitefactory/amidakuji/
+$ cd $GOPATH/src/github.com/nanitefactory/amidakuji/
 $ make
 ```
 
@@ -67,7 +67,7 @@ $ go get -v -u github.com/go-bindata/go-bindata/...
 ```
 
 ```
-$ cd $GOPATH/src/nanitefactory/amidakuji/
+$ cd $GOPATH/src/github.com/nanitefactory/amidakuji/
 $ make
 ```
 
