@@ -24,6 +24,12 @@ go:
 - tip
 
 before_install:
+# lowercase
+- cd $HOME
+- mv $HOME/gopath/src/github.com/NaniteFactory $HOME/gopath/src/github.com/nanitefactory
+- TRAVIS_BUILD_DIR=$HOME/gopath/src/github.com/nanitefactory/amidakuji
+- cd $TRAVIS_BUILD_DIR
+# install requirements
 - go get -v -u github.com/go-bindata/go-bindata/...
 - make glossary/asset.go --directory=$TRAVIS_BUILD_DIR
 
