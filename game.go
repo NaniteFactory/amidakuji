@@ -9,6 +9,7 @@ import (
 	"math"
 	"math/rand"
 	"os"
+	"path/filepath"
 	"reflect"
 	"strings"
 	"sync"
@@ -355,6 +356,8 @@ func (g *game) AnimatePaths(thunkAnimatePath func(participant int)) {
 	g.mutex.Lock()
 	defer g.mutex.Unlock()
 
+	titleSummary := "Summary"
+	captionSummary := ""
 	for participant := 0; participant < g.nPlayers; participant++ {
 		participantCurr := participant
 		participantNext := participant + 1
@@ -366,12 +369,41 @@ func (g *game) AnimatePaths(thunkAnimatePath func(participant int)) {
 			" 🎁 Prize\t(No. ", prize+1, ")\t", g.nametagPrizes[prize], "\t",
 			"\r\n",
 		)
+		captionSummary += strings.Replace(caption, "\r\n", "", -1) + "\r\n"
 		g.paths[participant].OnFinishedAnimation = func() {
 			if g.window.Monitor() == nil {
 				dialog.Message("%s", caption).Title(title).Info()
 			}
 			if participantNext < g.nPlayers {
 				thunkAnimatePath(participantNext)
+			} else {
+				dialog.Message("%s", captionSummary).Title(titleSummary).Info()
+				if dialog.Message("%s", "Would you like to save the results?").Title("Save Results").YesNo() {
+					saveAsTxt := func(content string) {
+						filePathName, err := dialog.File().Title("Save As").
+							Filter("Text file (*.txt)", "txt").
+							Filter("All Files (*.*)", "*").
+							Save()
+						if filepath.Ext(filePathName) == "" {
+							filePathName += ".txt"
+						}
+						if err != nil {
+							if err.Error() == "Cancelled" {
+								return
+							}
+							dialog.
+								Message("%s", "Invalid file path or something just went wrong."+"\r\n"+"\r\n"+fmt.Sprint(err)).
+								Title("Failed to set file path").
+								Error()
+							return
+						}
+						err = ioutil.WriteFile(filePathName, []byte(content), 0644)
+						if err != nil {
+							dialog.Message("%s", "Could not write the file."+"\r\n"+"\r\n"+fmt.Sprint(err)).Title("Failed to save as file").Error()
+						}
+					}
+					saveAsTxt(captionSummary)
+				}
 			}
 			g.paths[participantCurr].OnFinishedAnimation = nil
 		}
