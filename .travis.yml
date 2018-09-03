@@ -1,0 +1,35 @@
+language: go
+sudo: false
+addons:
+    apt:
+        packages:
+            - xorg-dev
+            - libx11-dev
+            - libxrandr-dev
+            - libxinerama-dev
+            - libxcursor-dev
+            - libxi-dev
+            - libopenal-dev
+            - libasound2-dev
+            
+            - libpango1.0-dev
+            - libgtk2.0-dev
+
+            - libglib2.0-dev
+            - libgdk-pixbuf2.0-dev
+            - libgl1-mesa-dev
+go:
+- 1.8
+- 1.7.4
+- tip
+
+before_install:
+- go get -v -u github.com/go-bindata/go-bindata/...
+- make glossary/asset.go --directory=$TRAVIS_BUILD_DIR
+
+install:
+- go get -t ./...
+
+script:
+- go test -i -race ./...
+- go test -v -race ./...

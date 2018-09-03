@@ -75,7 +75,7 @@ func Finalize() error {
 	errs := ""
 	for _, music := range musics {
 		music.Close()
-		err := music._Destory()
+		err := music._Destroy()
 		if err != nil {
 			errs += " " + err.Error()
 		}
@@ -124,7 +124,7 @@ func _NewMusic(name string, asset []byte) *_Music {
 	return &_Music{*tmpfile, stream, format}
 }
 
-// Destory deletes the temporary music file.
-func (music *_Music) _Destory() error {
+// Destroy deletes the temporary music file.
+func (music *_Music) _Destroy() error {
 	return os.Remove(music.Name())
 }
