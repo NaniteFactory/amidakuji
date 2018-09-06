@@ -39,7 +39,17 @@
 
 ## Build
 
-#### Windows
+#### Have Go installed properly
+
+```
+$ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+$ echo "PATH=$PATH:$GOROOT/bin:$GOPATH/bin" >> ~/.bashrc
+$ echo "PATH=$PATH:$GOROOT/bin:$GOPATH/bin" >> ~/.bash_profile
+```
+
+#### Windows or Mac
+
+*You might want to use MSYS or MSYS2 to run bash commands on Windows systems.*
 
 ```
 $ go get -v github.com/nanitefactory/amidakuji/...
@@ -52,6 +62,8 @@ $ make
 ```
 
 #### Ubuntu
+
+*Install dependent libraries. The rest is the same for any environments.*
 
 ```
 $ sudo apt-get clean
@@ -72,6 +84,16 @@ $ go get -v -u github.com/go-bindata/go-bindata/...
 $ cd $GOPATH/src/github.com/nanitefactory/amidakuji/
 $ make
 ```
+
+- - -
+
+## Run
+
+```
+$ ./amidakuji
+```
+
+*Or double-click on its icon on a file browser.*
 
 - - -
 
