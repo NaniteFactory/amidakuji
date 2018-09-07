@@ -11,29 +11,29 @@
 ## Examples
 
 | [GIF1](examples/user_conf_sample6.json) | [GIF2](examples/user_conf_sample3.json) |
-| --- | --- |
-| ![1](examples/1.gif) | ![2](examples/2.gif) |
+|-----------------------------------------|-----------------------------------------|
+| ![1](examples/1.gif)                    | ![2](examples/2.gif)                    |
 
-| GIF3 |
-| --- |
+| GIF3                 |
+|----------------------|
 | ![3](examples/3.gif) |
 
 - - -
 
 ## Control
 
-|  | Action | Input |
-| --- | --- | --- |
-|🔀 | Shuffle | 1 |
-| ▶️ | Find path | 2 |
-| ⏩ | Find path (faster) | 3 |
-| ⏸ | Pause | Space |
-| ⬆️➡️⬇️⬅️ | Move camera around | Arrow keys |
-| ↩️ | Rotate camera | Enter |
-| 🔭 | Zoom in and out | Scroll |
-| 🎇 | Firework | Left click |
-| 🔬 | Inspection | Right click |
-| 🔁 | Toggle full screen mode | Tab |
+|       | Action                  | Input       |
+|-------|-------------------------|-------------|
+| 🔀 	| Shuffle                 | 1           |
+| ▶️ 	| Find path               | 2           |
+| ⏩ 	| Find path (faster)      | 3           |
+| ⏸ 	| Pause                   | Space       |
+| ⬆️➡️⬇️⬅️ 	| Move camera around      | Arrow keys  |
+| ↩️ 	| Rotate camera           | Enter       |
+| 🔭 	| Zoom in and out         | Scroll      |
+| 🎇 	| Firework                | Left click  |
+| 🔬 	| Inspection              | Right click |
+| 🔁 	| Toggle full screen mode | Tab         |
 
 - - -
 
