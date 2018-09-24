@@ -41,7 +41,7 @@
 
 #### Have Go installed properly
 
-```
+```bash
 $ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 $ echo "PATH=$PATH:$GOROOT/bin:$GOPATH/bin" >> ~/.bashrc
 $ echo "PATH=$PATH:$GOROOT/bin:$GOPATH/bin" >> ~/.bash_profile
@@ -51,12 +51,12 @@ $ echo "PATH=$PATH:$GOROOT/bin:$GOPATH/bin" >> ~/.bash_profile
 
 *You might want to use MSYS or MSYS2 to run bash commands on Windows systems.*
 
-```
+```bash
 $ go get -v github.com/nanitefactory/amidakuji/...
 $ go get -v -u github.com/go-bindata/go-bindata/...
 ```
 
-```
+```bash
 $ cd $GOPATH/src/github.com/nanitefactory/amidakuji/
 $ make
 ```
@@ -65,22 +65,22 @@ $ make
 
 *Install dependent libraries. The rest is the same for any environments.*
 
-```
+```bash
 $ sudo apt-get clean
 $ sudo rm -r /var/lib/apt/lists/*
 $ sudo apt update
 ```
 
-```
+```bash
 $ sudo apt install libglib2.0-dev libpango1.0-dev libasound2-dev libgdk-pixbuf2.0-dev libgl1-mesa-dev xorg-dev libgtk2.0-dev
 ```
 
-```
+```bash
 $ go get -v github.com/nanitefactory/amidakuji/...
 $ go get -v -u github.com/go-bindata/go-bindata/...
 ```
 
-```
+```bash
 $ cd $GOPATH/src/github.com/nanitefactory/amidakuji/
 $ make
 ```
@@ -89,7 +89,7 @@ $ make
 
 ## Run
 
-```
+```bash
 $ ./amidakuji
 ```
 
