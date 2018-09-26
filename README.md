@@ -97,6 +97,14 @@ $ ./amidakuji
 
 - - -
 
+## Clean-up
+
+```bash
+$ make clean
+```
+
+- - -
+
 ## External sources
 
 #### Library
