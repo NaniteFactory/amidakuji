@@ -1,4 +1,4 @@
-# AMIDA KUJI
+# AMIDA KUJI (WINDOWS DLL)
 
 [![MIT License](https://img.shields.io/badge/Licence-MIT-blue.svg)](./LICENSE) [![Build Status](https://travis-ci.org/NaniteFactory/amidakuji.svg?branch=master)](https://travis-ci.org/NaniteFactory/amidakuji) [![Go Report Card](https://goreportcard.com/badge/github.com/nanitefactory/amidakuji)](https://goreportcard.com/report/github.com/nanitefactory/amidakuji) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/20cc2ee6013d4f5fae11817fa5fb1a6b)](https://www.codacy.com/app/NaniteFactory/amidakuji?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NaniteFactory/amidakuji&amp;utm_campaign=Badge_Grade) [![Coverage Status](https://coveralls.io/repos/github/NaniteFactory/amidakuji/badge.svg?branch=master)](https://coveralls.io/github/NaniteFactory/amidakuji?branch=master)
 
@@ -37,9 +37,11 @@
 
 - - -
 
-## Build
+## Build & Run
 
-#### Have Go installed properly
+You may want to use MSYS or MSYS2 to run bash commands on Windows systems.
+
+1. Have Go installed properly
 
 ```bash
 $ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
@@ -47,53 +49,46 @@ $ echo "PATH=$PATH:$GOROOT/bin:$GOPATH/bin" >> ~/.bashrc
 $ echo "PATH=$PATH:$GOROOT/bin:$GOPATH/bin" >> ~/.bash_profile
 ```
 
-#### Windows or Mac
-
-*You might want to use MSYS or MSYS2 to run bash commands on Windows systems.*
+2. go get
 
 ```bash
 $ go get -v github.com/nanitefactory/amidakuji/...
 $ go get -v -u github.com/go-bindata/go-bindata/...
 ```
 
-```bash
-$ cd $GOPATH/src/github.com/nanitefactory/amidakuji/
-$ make
-```
-
-#### Ubuntu
-
-*Install dependent libraries. The rest is the same for any environments.*
-
-```bash
-$ sudo apt-get clean
-$ sudo rm -r /var/lib/apt/lists/*
-$ sudo apt update
-```
-
-```bash
-$ sudo apt install libglib2.0-dev libpango1.0-dev libasound2-dev libgdk-pixbuf2.0-dev libgl1-mesa-dev xorg-dev libgtk2.0-dev
-```
-
-```bash
-$ go get -v github.com/nanitefactory/amidakuji/...
-$ go get -v -u github.com/go-bindata/go-bindata/...
-```
+3. make
 
 ```bash
 $ cd $GOPATH/src/github.com/nanitefactory/amidakuji/
 $ make
+```
+
+
+That's it!
+
+- - -
+
+#### Build only command
+
+```bash
+$ make build
 ```
 
 - - -
 
-## Run
+#### Run only command
 
 ```bash
-$ ./amidakuji
+$ rundll32.exe amidakuji.dll Test
 ```
 
-*Or double-click on its icon on a file browser.*
+- - -
+
+## Clean-up
+
+```bash
+$ make clean
+```
 
 - - -
 

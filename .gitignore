@@ -3,3 +3,6 @@ __ignore/
 glossary/asset.go
 debug
 *.exe
+
+amidakuji.dll
+amidakuji.h
