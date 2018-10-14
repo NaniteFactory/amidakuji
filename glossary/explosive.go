@@ -45,9 +45,7 @@ func (e *Explosions) SetBound(width, height float64) {
 }
 
 // IsExploding determines whether this Explosions is about to be updated or not.
-// Pass lock by value warning from (e Explosions) should be ignored,
-// because an Explosions here is just passed as a read only argument.
-func (e Explosions) IsExploding() bool {
+func (e *Explosions) IsExploding() bool {
 	e.mutex.Lock()
 	defer e.mutex.Unlock()
 
